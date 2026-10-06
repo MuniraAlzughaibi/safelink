@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SafeLink | رابط آمن</title>
+    <meta name="description" content="افحص الروابط والرسائل المشبوهة واكشف محاولات الاحتيال المالي قبل أن تقع." />
+    <meta name="theme-color" content="#0B1F44" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" type="image/svg+xml" href="icons/icon.svg" />
+    <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="wrap">
+        <div class="brand">
+          <img src="icons/icon.svg" alt="" width="40" height="40" />
+          <div>
+            <strong>SafeLink</strong>
+            <span>رابط آمن</span>
+          </div>
+        </div>
+        <h1>قبل ما تضغط… افحص</h1>
+        <p class="lead">اكشف روابط التصيّد ورسائل الاحتيال المالي التي تنتحل البنوك والجهات الرسمية في السعودية.</p>
+        <p class="badge-line">🏆 المركز الثالث في هاكاثون بنك الاستثمار السعودي ضد الاحتيال المالي</p>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <nav class="tabs" role="tablist">
+        <button role="tab" data-tab="link" aria-selected="true">فحص رابط</button>
+        <button role="tab" data-tab="message" aria-selected="false">فحص رسالة</button>
+        <button role="tab" data-tab="learn" aria-selected="false">تعلّم</button>
+        <button role="tab" data-tab="about" aria-selected="false">عن المشروع</button>
+      </nav>
+
+      <section id="tab-link" class="panel" role="tabpanel">
+        <form id="link-form" class="card input-card" autocomplete="off">
+          <label for="link-input">الصق الرابط الذي وصلك</label>
+          <div class="row">
+            <input id="link-input" type="text" inputmode="url" dir="ltr" placeholder="https://example.com" />
+            <button type="submit" class="primary">افحص</button>
+          </div>
+          <div class="chips" id="link-examples"><span>جرّب:</span></div>
+        </form>
+        <div id="link-result" aria-live="polite"></div>
+      </section>
+
+      <section id="tab-message" class="panel" role="tabpanel" hidden>
+        <form id="message-form" class="card input-card" autocomplete="off">
+          <label for="message-input">الصق نص الرسالة (SMS أو واتساب أو بريد)</label>
+          <textarea id="message-input" rows="5" placeholder="عميلنا العزيز، تم إيقاف حسابك…"></textarea>
+          <div class="row end">
+            <button type="submit" class="primary">افحص الرسالة</button>
+          </div>
+          <div class="chips" id="message-examples"><span>أمثلة:</span></div>
+        </form>
+        <div id="message-result" aria-live="polite"></div>
+      </section>
+
+      <section id="tab-learn" class="panel" role="tabpanel" hidden>
+        <div class="tips" id="tips"></div>
+      </section>
+
+      <section id="tab-about" class="panel" role="tabpanel" hidden>
+        <div class="card prose">
+          <h2>عن SafeLink</h2>
+          <p>
+            بدأ SafeLink فكرةً في <strong>هاكاثون بنك الاستثمار السعودي ضد الاحتيال المالي</strong>،
+            وحصل فريق <strong>PForce</strong> على <strong>المركز الثالث</strong>. هذه النسخة تحوّل الفكرة إلى أداة
+            تعمل فعليًا يمكن لأي شخص استخدامها.
+          </p>
+          <h3>كيف يعمل؟</h3>
+          <ul>
+            <li>يقارن الرابط بالنطاقات الرسمية للبنوك والجهات الحكومية، ويكشف النطاقات المقلّدة بفرق حرف أو حرفين.</li>
+            <li>يكشف الحيل التقنية: الرموز المختصرة، عناوين IP، الرمز @، الحروف المموّهة، والامتدادات المشبوهة.</li>
+            <li>يحلل نص الرسالة بحثًا عن أساليب الاحتيال الشائعة: طلب رمز التحقق، التهديد بإيقاف الحساب، الجوائز، الشحنات، والمخالفات.</li>
+            <li>يعطي نتيجة <strong>آمن / مشبوه / خطير</strong> مع سبب واضح لكل مؤشر.</li>
+          </ul>
+          <h3>الخصوصية</h3>
+          <p>كل الفحص يتم داخل متصفحك. لا يُرسل أي رابط أو رسالة إلى أي خادم.</p>
+          <h3>فريق PForce</h3>
+          <ul class="team">
+            <li><strong>منال الفهمي</strong> قائدة الفريق وصاحبة الفكرة</li>
+            <li><strong>رند العماش</strong> تطوير الأفكار والتصميم</li>
+            <li><strong>ملاء الضبيطي</strong> المحتوى والعرض التقديمي</li>
+            <li><strong>روان العلي</strong> المحتوى والعرض التقديمي والتصميم</li>
+            <li><strong>منيرة الزغيبي</strong> برمجة التطبيق، وتطوير هذه النسخة</li>
+          </ul>
+          <p class="muted">
+            SafeLink أداة توعوية تساعدك على اكتشاف المؤشرات الشائعة، ولا تضمن سلامة أي موقع. عند الشك، تواصل مع الجهة عبر قنواتها الرسمية.
+          </p>
+        </div>
+      </section>
+
+      <section class="history" id="history" hidden>
+        <h2>آخر الفحوصات</h2>
+        <ul id="history-list"></ul>
+      </section>
+    </main>
+
+    <footer class="wrap footer">
+      <a href="https://github.com/MuniraAlzughaibi/safelink">الكود على GitHub</a>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
